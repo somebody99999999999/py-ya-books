@@ -3,4 +3,5 @@ import csv
 
 with open("YA_Books.csv", mode="r") as bookfile:
     # mode "r" means read!
-    
+
+    books = csv.reader(bookfile)
