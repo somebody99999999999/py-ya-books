@@ -14,4 +14,5 @@ with open("YA_Books.csv", mode="r") as bookfile:
         #     print(author)
 
         # get most recently published book
+        year = book[2]
         
