@@ -10,7 +10,7 @@ with open("YA_Books.csv", mode="r") as bookfile:
 
     most_recent_published = 0 # starting low so that we actally capture the first book
     
-    worst_rating = 0 # starting low to find the worst rating out of all the books 3.52
+    lowest_rating = 5 # starting low to find the worst rating out of all the books 3.52
 
     for book in books:
         title = book[0]
@@ -20,15 +20,18 @@ with open("YA_Books.csv", mode="r") as bookfile:
         # if author.startswith("M"):
         #     print(author)
 
-        # get most recently published book
-        year = int(book[2])
-        if year > most_recent_published:
-            most_recent_published = year
-            most_recent_book = book
+        # # get most recently published book
+        # year = int(book[2])
+        # if year > most_recent_published:
+        #     most_recent_published = year
+        #     most_recent_book = book
 
         # get the book with the worst rating:
-        rating = int(book[6])
-        if rating > int(book[6]):
+        rating = float(book[6])
+        if lowest_rating > rating:
+            lowest_rating = rating
+            lowest_book_rating = book
+    print(f"Lowest book rating: {lowest_book_rating}")
             
 
     # print(f"Most recently published: {most_recent_book}")
