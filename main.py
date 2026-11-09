@@ -16,7 +16,7 @@ with open("YA_Books.csv", mode="r") as bookfile:
         #     print(author)
 
         # get most recently published book
-        year = book[2]
+        year = int(book[2])
         if year < most_recent_published:
             most_recent_published = year
             most_recent_book = book
