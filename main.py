@@ -8,7 +8,7 @@ with open("YA_Books.csv", mode="r") as bookfile:
     # skip header row
     next(books)
 
-    most_recent_published = 99999 # starting high so that we actally capture the first book
+    most_recent_published = 0 # starting low so that we actally capture the first book
 
     for book in books:
         title = book[0]
@@ -19,7 +19,7 @@ with open("YA_Books.csv", mode="r") as bookfile:
 
         # get most recently published book
         year = int(book[2])
-        if year < most_recent_published:
+        if year > most_recent_published:
             most_recent_published = year
             most_recent_book = book
 
