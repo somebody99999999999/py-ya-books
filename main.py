@@ -6,6 +6,8 @@ with open("YA_Books.csv", mode="r") as bookfile:
 
     books = csv.reader(bookfile)
 
+    most_recent_published = 9999 # starting high so that we actally capture the first book
+
     for book in books:
         title = book[0]
         author = book[1]
@@ -15,4 +17,6 @@ with open("YA_Books.csv", mode="r") as bookfile:
 
         # get most recently published book
         year = book[2]
-        
+        if year < most_recent_published:
+            
+
