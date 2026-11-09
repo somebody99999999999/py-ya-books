@@ -7,4 +7,4 @@ with open("YA_Books.csv", mode="r") as bookfile:
     books = csv.reader(bookfile)
 
     for book in books:
-        print(book)
+        print(book[0])
