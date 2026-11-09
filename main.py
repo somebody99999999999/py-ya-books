@@ -5,8 +5,10 @@ with open("YA_Books.csv", mode="r") as bookfile:
     # mode "r" means read!
 
     books = csv.reader(bookfile)
+    # skip header row
+    next(books)
 
-    most_recent_published = 9999 # starting high so that we actally capture the first book
+    most_recent_published = 99999 # starting high so that we actally capture the first book
 
     for book in books:
         title = book[0]
