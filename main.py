@@ -44,5 +44,5 @@ with open("YA_Books.csv", mode="r") as bookfile:
         if highest_rating < ratingtwo:
             highest_rating = ratingtwo
             highest_book_rating = book
-    # # print book with the best rating
+    # print book with the best rating
     print(f"Highest Book rating:  {highest_rating}")
