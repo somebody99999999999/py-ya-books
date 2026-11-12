@@ -12,12 +12,13 @@ with open("YA_Books.csv", mode="r") as bookfile:
     
     lowest_rating = 5 # starting high to find the worst rating out of all the books 3.52
 
-    highest_rating = 5 # starting low to find the best rating out of all the books 4.52
+    highest_rating = 0 # starting low to find the best rating out of all the books 4.52
 
     for book in books:
         title = book[0]
         author = book[1]
         rating = book[6]
+        ratingtwo = book[6]
 
     #     # print all authors that begin with the letter "M"
     #     if author.startswith("M"):
@@ -39,10 +40,11 @@ with open("YA_Books.csv", mode="r") as bookfile:
     # # print book with worst rating
     # print(f"Lowest book rating: {lowest_book_rating}")
          
-          # get the book with the best rating
+        # get the book with the best rating
         ratingtwo = float(book[6])
         if highest_rating < ratingtwo:
             highest_rating = ratingtwo
             highest_book_rating = book
+
     # print book with the best rating
-    print(f"Highest Book rating:  {highest_rating}")
+    print(f"Highest Book rating:  {highest_book_rating}")
