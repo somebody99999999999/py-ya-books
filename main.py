@@ -1,5 +1,9 @@
 import matplotlib.pyplot as plt
 import numpy as np
+import matplotlib.pyplot as plt
+
+# Spaces out the words so that everything can fit on the screen without overlapping
+fig, ax = plt.subplots(figsize=(15.5, 6)) 
 
 import csv
 # comma separated value
@@ -52,8 +56,11 @@ with open("YA_Books.csv", mode="r") as bookfile:
     # # print book with the best rating
     # print(f"Highest Book rating:  {highest_book_rating}")
 
-x = [book[0],book[1],book[2],book[3],book[4],book[5],book[6]]
-y = [10,10,10,10,10,10,10]
+# x = [book[0],book[1],book[2],book[3],book[4],book[5],book[6]]
+# y = [10,10,10,10,10,10,10]
 
-plt.bar(x,y)
+something = ["Angeline Boulley", "Elizabeth Acevedo "," Kacen Callender","Adiba Jaigirdar ","Traci Chee "," Leah Johnson","Nina LaCour "," Nic Stone"]
+y = [4.41,4.4,4.26,3.92,4.48,4.12,3.96,4.33]
+
+plt.bar(something,y)
 plt.show()
