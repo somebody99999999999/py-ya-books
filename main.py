@@ -10,7 +10,9 @@ with open("YA_Books.csv", mode="r") as bookfile:
 
     most_recent_published = 0 # starting low so that we actally capture the first book
     
-    lowest_rating = 5 # starting low to find the worst rating out of all the books 3.52
+    lowest_rating = 5 # starting high to find the worst rating out of all the books 3.52
+
+    highest_rating = 0 # starting low to find the best rating out of all the books 4.52
 
     for book in books:
         title = book[0]
@@ -37,4 +39,5 @@ with open("YA_Books.csv", mode="r") as bookfile:
     # # print book with worst rating
     # print(f"Lowest book rating: {lowest_book_rating}")
          
-         # get the book with the best rating 
+          # get the book with the best rating
+        ratingtwo = float(book[6])
