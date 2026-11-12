@@ -52,8 +52,8 @@ with open("YA_Books.csv", mode="r") as bookfile:
     # # print book with the best rating
     # print(f"Highest Book rating:  {highest_book_rating}")
 
-x = np.array(book[6][ "B", "C", "D"])
-y = np.array([3, 8, 1, 10])
+x = [book[0],book[1],book[2],book[3],book[4],book[5],book[6]]
+y = [10,10,10,10,10,10,10]
 
 plt.bar(x,y)
 plt.show()
